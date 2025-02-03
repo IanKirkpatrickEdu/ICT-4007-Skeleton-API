@@ -72,7 +72,7 @@ class DogUpdateInput(BaseModel):
     breed: DogBreedEnum | None = None
     color: str | None = Field(default=None, min_length=1, max_length=20)
     age: int | None = Field(default=None,min=0, max=30)
-    sex: DogSexEnum 
+    sex: DogSexEnum | None = Field(default=None)
     description: str | None = None # using default max length from model_config
 
 
